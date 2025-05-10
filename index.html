@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Workflow Manager</h1>
+    <p>Manage your workflow with labeled tabs and Gists</p>
+  </header>
+
+  <main>
+    <section id="config-section">
+      <h2>Configuration</h2>
+      <form id="config-form">
+        <label for="gist-id">Gist ID:</label>
+        <input type="text" id="gist-id" placeholder="Enter your Gist ID" required />
+
+        <label for="gh-token">GitHub Token:</label>
+        <input type="password" id="gh-token" placeholder="Enter your GitHub Token" required />
+
+        <button type="submit">Start Session</button>
+      </form>
+    </section>
+
+    <section id="tabs-section">
+      <h2>Open Tabs</h2>
+      <table id="tabs-table">
+        <thead>
+          <tr>
+            <th>Tab ID</th>
+            <th>URL</th>
+            <th>Role</th>
+            <th>Assign Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4">No tabs detected yet...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="workflow-section">
+      <h2>Workflow</h2>
+      <button id="next-step">Trigger Next Step</button>
+      <div id="status-box">Waiting for input...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Workflow Manager. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
